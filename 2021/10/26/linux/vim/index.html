@@ -1,0 +1,457 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Caigxg">
+  <meta name="keywords" content="">
+  
+  <title>vim - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"dailyup.top","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="vim">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-10-26 21:31" pubdate>
+        2021年10月26日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      24
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">vim</h1>
+            
+            <div class="markdown-body">
+              <h1 id="查看是否能使用系统剪切板"><a href="#查看是否能使用系统剪切板" class="headerlink" title="查看是否能使用系统剪切板"></a>查看是否能使用系统剪切板</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 方式1</span><br>vim --version | grep clipboard # +clipboard为支持<br><span class="hljs-meta">#</span><span class="bash"> 方式2</span><br>vim<br>:echo has(&quot;clipboard&quot;)  # 1为支持<br></code></pre></td></tr></table></figure>
+
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs shell">vim ~/.vimrc<br>&quot;默认使用系统剪切板&quot;<br>set clipboard=unnamedplus <br>&quot;显示行号&quot;<br>set nu <br>&quot;语法高亮&quot;<br>syntax on <br>&quot;使用utf-8编码&quot;<br>set encoding=utf-8 <br>&quot;显示光标所在行的行号，其它行都为相对改行的行号&quot;<br>set relativenumber <br>&quot;光标所在的当前行高亮&quot;<br>set cursorline <br>&quot;自动拆行,关闭用set nowtap &quot;<br>set wrap <br>&quot;在状态栏显示光标的当前位置（位于哪一行哪一列）&quot;<br>set ruler <br>&quot;光标遇到圆括号、方括号、大括号时，自动高亮对应的另一个圆括号、方括号和大括号&quot;<br>set showmatch <br>&quot;搜索时，高亮显示匹配结果&quot;<br>set hlsearch <br>&quot;输入搜索模式时，每输入一个字符，就自动跳到第一个匹配的结果&quot;<br>set incsearch <br>&quot;搜索时忽略大小写&quot;<br>set ignorecase smartcase <br></code></pre></td></tr></table></figure>
+<h1 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs txt">左移： ←或h<br>下移：↓或j<br>上移：↑或k<br>右移：→或l<br>到下个单词首字母：w<br>到下个字符串首字母：W(大写)<br>到下个单词词尾：e<br>到上个单词首字母：b<br>向下翻页：[Ctrl]+f  或 [page down]<br>向上翻页：[Ctrl]+b  或 [page up]<br>到非空格的下一列：+<br>到非空格的上一列：-<br>向右移动n个字符： n+[space]<br>到行首：0  或 [home]<br>到行尾：$  或 [end]<br>到屏幕最上方一行的首字符：H<br>到屏幕中央的首字符：M<br>到屏幕最下方的首字符：L<br>到文档第一行：gg  或 1G<br>到文档最后一行：G<br>到文档第n行：nG<br>向下移动n行：n+[enter]<br></code></pre></td></tr></table></figure>
+
+<h1 id="一般模式切换到编辑模式"><a href="#一般模式切换到编辑模式" class="headerlink" title="一般模式切换到编辑模式"></a>一般模式切换到编辑模式</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs txt">从光标处开始输入：i<br>从光标所在行的第一个非空字符处开始输入：I<br>从光标的下一个字符处开始输入：a<br>从光标所在行的最后一个字符开始输入：A<br>从光标的下一行开始输入：o<br>从光标的上一行开始输入：O(大写)<br>输入新的字符替换当前字符：r<br>持续向右替换光标处的字符，按[esc]停止：R<br>删除当前字符并进入编辑：    s<br>删除当前单词并进入编辑：    cw<br>删除到指定字符并进入编辑：  ct字符<br>删除整行并进入编辑：    S(大写) 或C<br></code></pre></td></tr></table></figure>
+
+<h1 id="一般模式下"><a href="#一般模式下" class="headerlink" title="一般模式下"></a>一般模式下</h1><h2 id="查找-amp-替换"><a href="#查找-amp-替换" class="headerlink" title="查找&amp;替换"></a>查找&amp;替换</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs awk">查找字符：f+字符<br>    继续当前查找字符：;(英文分号)<br>向下查找字符串：/+字符串<br>向上查找字符转：?+字符转<br>重复上一个查找动作：n<br>反向重复上一个查找动作：N<br>在n1和n2之间(直接)把w1替换为w2：:n1,n2s<span class="hljs-regexp">/w1/</span>w2/g<br>在n1和n2之间(需用户确认)把w1替换为w2：:n1,n2s<span class="hljs-regexp">/w1/</span>w2/gc<br>全文替换： :% s<span class="hljs-regexp">/w1/</span>w2/g<br>精确字符替换：  :% s<span class="hljs-regexp">/\&lt;字符\&gt;/</span>替换的字符/g<br>只显示需要替换的次数而不替换： :% s<span class="hljs-regexp">/w1/</span>w2/n  <br></code></pre></td></tr></table></figure>
+
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs txt">删除和复制都是将操作的字符放到寄存器中，默认为无名寄存器，可以指定寄存器（a-z） &quot;寄存器名  如 &quot;ayy 将内容保存到a寄存器中<br>系统剪切板：  可以在所有地方使用复制粘贴，而不限于文件中<br>向前删除一个字符：X  或 [backspace]<br>向后删除一个字符：x  或 [del]<br>删除光标所在行：dd<br>向下删除n行：ndd<br>删除当前光标位置到第一行：d1G<br>删除当前光标位置到最后一行：dG<br>删除当前光标到所在行行首：d0<br>删除当前光标到所在行行尾：d$<br>删除1到10行: :1,10d<br>删除括号内内容: di(<br>删除到指定字符: dt?<br></code></pre></td></tr></table></figure>
+
+<h2 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h2><figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs isbl">复制一个字符： <span class="hljs-variable">yiw</span><br>复制当前行：<span class="hljs-variable">yy</span><br>向下复制<span class="hljs-variable">n</span>行：<span class="hljs-variable">nyy</span><br>在当前光标的下一行粘贴：<span class="hljs-function"><span class="hljs-title">p</span>(小写)</span><br>在当前光标的上一行粘贴：<span class="hljs-function"><span class="hljs-title">P</span>(大写)</span><br>复制到系统剪切板： <span class="hljs-string">&quot;+yy</span><br><span class="hljs-string">使用系统剪切板: &quot;</span>+<span class="hljs-variable">p</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs less">宏操作： 批量处理<br>录制宏： <span class="hljs-selector-tag">q</span>寄存器名 (显示recoding开始录制操作)<br>使用宏： @寄存器名 (对操作对象使用录制的操作)<br>批量处理： <span class="hljs-selector-tag">V</span>选择处理的对象, : 后输入 <span class="hljs-selector-tag">normal</span> @寄存器 ，对所有选到的对象进行录制的操作<br></code></pre></td></tr></table></figure>
+
+<h2 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs txt">保存：  :w<br>离开：  :q<br>强制操作：  !<br>保存修改后离开： ZZ<br>文件另存为：    :w 文件名<br>将另一个文件的内容加载进来：    :r 文件名<br>把n1到n2间的内容存为文档：  :n1,n2 w 文件名<br>暂时离开vi，执行其它指令： :! 指令<br>重新加载并不保存当前文件： :e!<br><br>当前光标所在行与下一行合并：J<br>复原前一个动作：u<br>重复前一个动作：. (英文点)<br></code></pre></td></tr></table></figure>
+
+<h2 id="多文件编辑"><a href="#多文件编辑" class="headerlink" title="多文件编辑"></a>多文件编辑</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs txt">打开一个文件后，在一般模式下 :ls 可以查看打开的文件<br>:b 序号 打开对应序号的文件<br><br>分割窗口    编辑同一文件时，所有分割区都会生效<br>水平分割：  [Ctrl]+w后s  或者   :sp<br>垂直分割：  [Ctrl]+w后v  或者   :vs<br>切换窗口：  [Ctrl]+w后w  循环切换 (h:左  j:下 k:上 l:右)<br>移动窗口：  [Ctrl]+w后(大写的H J K L)<br>在当前文件下分割打开另一个文件：    :vs 文件名  或 :sp 文件名<br>打开新的标签编辑页：    :tabnew 文件名<br>切换标签页：    gt<br>到下一个标签： :tabn<br>到上一个标签： :tabp<br></code></pre></td></tr></table></figure>
+
+<h2 id="块选择"><a href="#块选择" class="headerlink" title="块选择"></a>块选择</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs txt">区块选择：<br>字符选择：v    将光标经过的地方选中<br>行选择：V   将光标经过的行选中<br>以长方形方式选中：[Ctrl]+v<br>可以对选中的区域进行复制：y(或删除：d)<br><br>多文档编辑：<br>同时打开多个文档： vi file1 file2 file3<br>编辑下一个文档：    :n<br>列出所有开启的文档：    :files<br></code></pre></td></tr></table></figure>
+<h2 id="标记"><a href="#标记" class="headerlink" title="标记"></a>标记</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs txt">打标记 m(a-zA-Z) <br>  小写是在单一文件可跳转到标记，大写可在不同文件间跳转<br>跳转到标记 <br>&#x27;a 跳转到打标记时的光标位置<br>`a 跳转到打标记时光标所在行首<br></code></pre></td></tr></table></figure>
+<h1 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs txt">向左删除一位：  [Ctrl]+h<br>向左删除一个word：  [Ctrl]+w<br>删除整行: [Ctrl]+u<br>退出编辑模式：  [Ctrl]+c<br><br>补全类型：<br>补全单词： [Ctrl]+n 或 [Ctrl]+p  (匹配文件中的单词，多个候选时，[Ctrl]+n跳到下一个候选词，[Ctrl]+p到上一个候选词)<br>补全文件名：[Ctrl]+x 或 [Ctrl]+f<br></code></pre></td></tr></table></figure>
+
+<h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 前提环境python python3 ruby</span><br><span class="hljs-meta">#</span><span class="bash"> 从github上获取文件，放到~/.vim/<span class="hljs-built_in">autoload</span>/</span><br><span class="hljs-meta">#</span><span class="bash">方法1:</span> <br>curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim<br><span class="hljs-meta">#</span><span class="bash"> 方法2: (其他文件可删除,只需要plug.vim文件)</span><br>git clone https://github.com/junegunn/vim-plug.git .vim/autoload<br><span class="hljs-meta"></span><br><span class="hljs-meta">#</span><span class="bash"> 修改配置文件</span><br>vim ~/.vimrc<br><span class="hljs-meta">#</span><span class="bash"> 以下内容放到文件开始的地方</span><br>if empty(glob(&#x27;~/.vim/autoload/plug.vim&#x27;))<br>  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs<br>    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim<br>  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC<br>endif<br><br>&quot;安装需要的插件&quot;<br>call plug#begin(&#x27;~/.vim/plugged&#x27;)<br>Plug &#x27;justinmk/vim-sneak&#x27;<br>Plug &#x27;jiangmiao/auto-pairs&#x27; &quot;自动补全，删除对应括号&quot;<br>Plug &#x27;preservim/nerdtree&#x27; &quot;文件目录树&quot;<br>Plug &#x27;Yggdroot/LeaderF&#x27;, &#123; &#x27;do&#x27;: &#x27;./install.sh&#x27; &#125; &quot; 模糊查找文件&quot;<br>Plug &#x27;mhinz/vim-startify&#x27; &quot; 进入vim时，显示最近打开的文件&quot;<br>Plug &#x27;iamcco/markdown-preview.nvim&#x27;, &#123; &#x27;do&#x27;: &#123; -&gt; mkdp#util#install_sync() &#125;, &#x27;for&#x27; :[&#x27;markdown&#x27;, &#x27;vim-plug&#x27;] &#125; &quot; markdown预览&quot;<br>Plug &#x27;dhruvasagar/vim-table-mode&#x27;, &#123; &#x27;on&#x27;: &#x27;TableModeToggle&#x27; &#125;<br>Plug &#x27;vimwiki/vimwiki&#x27;<br>call plug#end()<br><span class="hljs-meta"></span><br><span class="hljs-meta">#</span><span class="bash"> 重新加载 <span class="hljs-built_in">source</span> ~/.vimrc</span><br><span class="hljs-meta">#</span><span class="bash"> 进行安装</span><br><span class="hljs-meta">#</span><span class="bash"> 方法1</span> <br>vim -es -u vimrc -i NONE -c &quot;PlugInstall&quot; -c &quot;qa&quot;<br><span class="hljs-meta">#</span><span class="bash"> 方法2 打开vim 输入</span> <br>:PlugInstall <br><span class="hljs-meta">#</span><span class="bash"> 更新插件</span> <br>:PlugUpdate<br><span class="hljs-meta">#</span><span class="bash"> 清除不在配置文件的插件</span> <br>:PlugClean<br></code></pre></td></tr></table></figure>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/linux/">linux</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/linux/">linux</a>
+                    
+                      <a class="hover-with-bg" href="/tags/vim/">vim</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/10/19/linux/shell/">
+                        <span class="hidden-mobile">shell</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
