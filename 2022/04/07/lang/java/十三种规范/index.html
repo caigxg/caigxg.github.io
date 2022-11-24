@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>butterfly | butterfly</title><meta name="author" content="Caigxg"><meta name="copyright" content="Caigxg"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="JDBC(Java Database Connectivity):用于执行SQL语句的Java API，可以为多种关系数据库提供统一访问，它由类和接口组成 JNDI(Java Name and Directory Interface):在Java应用中访问命名和目录服务 EJB(Enterprise JavaBean):运行在一个独立的服务器上，并封装了业务逻辑的组件就是EJB组件。其实就是把原">
+<meta property="og:type" content="article">
+<meta property="og:title" content="butterfly">
+<meta property="og:url" content="http://dailyup.top/2022/04/07/lang/java/%E5%8D%81%E4%B8%89%E7%A7%8D%E8%A7%84%E8%8C%83/index.html">
+<meta property="og:site_name" content="butterfly">
+<meta property="og:description" content="JDBC(Java Database Connectivity):用于执行SQL语句的Java API，可以为多种关系数据库提供统一访问，它由类和接口组成 JNDI(Java Name and Directory Interface):在Java应用中访问命名和目录服务 EJB(Enterprise JavaBean):运行在一个独立的服务器上，并封装了业务逻辑的组件就是EJB组件。其实就是把原">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2022-04-07T13:54:17.553Z">
+<meta property="article:modified_time" content="2022-04-07T13:54:17.557Z">
+<meta property="article:author" content="Caigxg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://dailyup.top/2022/04/07/lang/java/%E5%8D%81%E4%B8%89%E7%A7%8D%E8%A7%84%E8%8C%83/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'butterfly',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-04-07 21:54:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">butterfly</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-07T13:54:17.553Z" title="发表于 2022-04-07 21:54:17">2022-04-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-07T13:54:17.557Z" title="更新于 2022-04-07 21:54:17">2022-04-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><ol>
+<li><strong>JDBC(Java Database Connectivity):</strong><br>用于执行SQL语句的Java API，可以为多种关系数据库提供统一访问，它由类和接口组成</li>
+<li><strong>JNDI(Java Name and Directory Interface):</strong><br>在Java应用中访问命名和目录服务</li>
+<li><strong>EJB(Enterprise JavaBean):</strong><br>运行在一个独立的服务器上，并封装了业务逻辑的组件就是EJB组件。其实就是把原来放到客户端实现的代码放到服务器端，并依靠RMI进行通信.运行在一个独立的服务器上，并封装了业务逻辑的组件就是EJB组件。其实就是把原来放到客户端实现的代码放到服务器端，并依靠RMI进行通信</li>
+<li><strong>RMI(Remote Method Invoke):</strong><br>RMI协议调用远程对象上方法。它使用了序列化方式在客户端和服务器端传递数据。RMI是非常重要的底层技术，是分布式的基础所在</li>
+<li><strong>Java IDL/CORBA：</strong><br>Java接口定义语言/公用对象请求代理程序体系结构，在JavaIDL的支持下，开发人员可以将Java和CORBA集成在一起。</li>
+<li><strong>JSP(Java Sever Pages):</strong><br>JSP页面=HTML+Java,其根本是一个简化的Servlet设计.服务器在页面被客户端请求后,对这些Java代码进行处理,然后将执行结果连同原HTML代码生成的新HTML页面返回给客户端浏览器</li>
+<li><strong>Java Servlet:</strong><br>一种服务器端的Java应用程序，具有独立于平台和协议的特性，可以生成动态的Web页面。它担当客户请求（Web浏览器或其他HTTP客户程序）与服务器响应（HTTP服务器上的数据库或应用程序）的中间层.Servlet由Web服务器进行加载，该Web服务器必须包含支持Servlet的Java虚拟机</li>
+<li><strong>XML(Extensible Markup Language):</strong><br>可以用来定义其它标记语言的语言,被用来在不同的商务过程中共享数据</li>
+<li><strong>JMS(Java Message Service):</strong><br>是一个Java平台中关于面向消息中间件（MOM）的API，用于在两个应用程序之间，或分布式系统中发送消息，进行异步通信.与具体平台无关,绝大多数MOM提供商都对JMS提供支持。</li>
+<li><strong>JTA(Java Transaction Architecture):</strong><br>Java事务API,允许应用程序执行分布式事务处理.JDBC驱动程序的JTA支持极大地增强了数据访问能力.一个JTA事务可以有多个参与者，而一个JDBC事务则被限定在一个单一的数据库连接</li>
+<li><strong>JTS(Java Transaction Service):</strong><br>是CORBA OTS事务监控的基本的实现,规定了事务管理器的实现方式.JTS事务管理器为应用服务器、资源管理器、独立的应用以及通信资源管理器提供了事务服务</li>
+<li><strong>JavaMail:</strong><br>用于存取邮件服务器的API,支持SMTP服务器和IMAP服务器</li>
+<li><strong>JAF(JavaBeans Activation Framework):</strong><br>是一个专用的数据处理框架,用于封装数据,并为应用程序提供访问和操作数据的接口.JavaMail利用JAF来处理MIME编码的邮件附件。MIME的字节流可以被转换成Java对象，或者转换自Java对象</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Caigxg</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://dailyup.top/2022/04/07/lang/java/%E5%8D%81%E4%B8%89%E7%A7%8D%E8%A7%84%E8%8C%83/">http://dailyup.top/2022/04/07/lang/java/%E5%8D%81%E4%B8%89%E7%A7%8D%E8%A7%84%E8%8C%83/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://dailyup.top" target="_blank">butterfly</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/04/07/lang/java/IO%E4%B8%8ENIO/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2022/04/07/lang/java/basic/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Caigxg</div><div class="author-info__description">观空舍执，直面真如</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">偶有更新</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/12/lang/python/python/" title="python"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python"/></a><div class="content"><a class="title" href="/2022/04/12/lang/python/python/" title="python">python</a><time datetime="2022-04-12T11:14:30.000Z" title="发表于 2022-04-12 19:14:30">2022-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/other/git/" title="git"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git"/></a><div class="content"><a class="title" href="/2022/04/11/other/git/" title="git">git</a><time datetime="2022-04-11T10:37:30.000Z" title="发表于 2022-04-11 18:37:30">2022-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/db2/" title="db2"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="db2"/></a><div class="content"><a class="title" href="/2022/04/07/database/db2/" title="db2">db2</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/mysql/" title="mysql"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mysql"/></a><div class="content"><a class="title" href="/2022/04/07/database/mysql/" title="mysql">mysql</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/db2-errorCode/" title="db2-errorCode"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="db2-errorCode"/></a><div class="content"><a class="title" href="/2022/04/07/database/db2-errorCode/" title="db2-errorCode">db2-errorCode</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Caigxg</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>butterfly | butterfly</title><meta name="author" content="Caigxg"><meta name="copyright" content="Caigxg"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="[toc] 七大原则单一职责原则 降低类的复杂度,一个类只负责一项职责 提高类的可读性,可维护性 降低变更风险 通常情况下,应该遵守单一原则,只有逻辑足够简单,才可以在代码级违反单一原则职责原则:只有类中方法数量足够少,可以在方法级别保持单一职责原则  接口隔离原则每个接口中不存在子类用不到却必须实现的方法，如果不然，就要将接口拆分   依赖倒转原则面向接口编程，依赖于抽象而不依赖于具体 ;中心思">
+<meta property="og:type" content="article">
+<meta property="og:title" content="butterfly">
+<meta property="og:url" content="http://dailyup.top/2022/04/07/lang/java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:site_name" content="butterfly">
+<meta property="og:description" content="[toc] 七大原则单一职责原则 降低类的复杂度,一个类只负责一项职责 提高类的可读性,可维护性 降低变更风险 通常情况下,应该遵守单一原则,只有逻辑足够简单,才可以在代码级违反单一原则职责原则:只有类中方法数量足够少,可以在方法级别保持单一职责原则  接口隔离原则每个接口中不存在子类用不到却必须实现的方法，如果不然，就要将接口拆分   依赖倒转原则面向接口编程，依赖于抽象而不依赖于具体 ;中心思">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2022-04-07T13:54:17.557Z">
+<meta property="article:modified_time" content="2022-04-07T13:54:17.557Z">
+<meta property="article:author" content="Caigxg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://dailyup.top/2022/04/07/lang/java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'butterfly',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-07 21:54:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">butterfly</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-07T13:54:17.557Z" title="发表于 2022-04-07 21:54:17">2022-04-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-07T13:54:17.557Z" title="更新于 2022-04-07 21:54:17">2022-04-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>[toc]</p>
+<h1 id="七大原则"><a href="#七大原则" class="headerlink" title="七大原则"></a>七大原则</h1><h2 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h2><ol>
+<li>降低类的复杂度,一个类只负责一项职责</li>
+<li>提高类的可读性,可维护性</li>
+<li>降低变更风险</li>
+<li>通常情况下,应该遵守单一原则,只有逻辑足够简单,才可以在代码级违反单一原则职责原则:只有类中方法数量足够少,可以在方法级别保持单一职责原则</li>
+</ol>
+<h2 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h2><p>每个接口中不存在子类用不到却必须实现的方法，如果不然，就要将接口拆分  </p>
+<h2 id="依赖倒转原则"><a href="#依赖倒转原则" class="headerlink" title="依赖倒转原则"></a>依赖倒转原则</h2><p>面向接口编程，依赖于抽象而不依赖于具体 ;中心思想为面向接口编程,以抽象为基础搭建的架构比细节为基础的架构要稳定</p>
+<h3 id="依赖关系的三种传递方式"><a href="#依赖关系的三种传递方式" class="headerlink" title="依赖关系的三种传递方式"></a>依赖关系的三种传递方式</h3><h4 id="接口传递"><a href="#接口传递" class="headerlink" title="接口传递"></a>接口传递</h4><h4 id="构造方法传递"><a href="#构造方法传递" class="headerlink" title="构造方法传递"></a>构造方法传递</h4><h4 id="setter方式传递"><a href="#setter方式传递" class="headerlink" title="setter方式传递"></a>setter方式传递</h4><h2 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h2><p>面向对象设计的基本原则之一，任何基类可以出现的地方，子类一定可以出现。子类对父类的方法尽量不要重写和重载。因为父类代表了定义好的结构，通过这个规范的接口与外界交互，子类不应该随便破坏它。  </p>
+<h2 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h2><p>开闭原则：对扩展开放，对修改关闭  </p>
+<h2 id="迪米特法则"><a href="#迪米特法则" class="headerlink" title="迪米特法则"></a>迪米特法则</h2><p>表达1：一个类对自己依赖的类知道的越少越好；表达2：只与直接的朋友通信。类之间只要有耦合关系，就叫朋友关系。耦合分为依赖、关联、聚合、组合等。我们称出现为成员变量、方法参数、方法返回值中的类为直接朋友。局部变量、临时变量则不是直接的朋友。我们要求陌生的类不要作为局部变量出现在类中。  </p>
+<h2 id="合成复用原则"><a href="#合成复用原则" class="headerlink" title="合成复用原则"></a>合成复用原则</h2><p>尽量首先使用合成/聚合的方式，而不是使用继承</p>
+<h1 id="设计模式简介"><a href="#设计模式简介" class="headerlink" title="设计模式简介"></a>设计模式简介</h1><ul>
+<li>意义：每一个设计模式描述了一个不断重复发生的问题，以及该问题的解决方案的核心。以便于用该解决方案而不必重复劳动。    </li>
+<li>四个要素：</li>
+</ul>
+<ol>
+<li>模式名称：描述模式的问题、解决方案、效果</li>
+<li>问题：描述应该在何时使用该模式   </li>
+<li>解决方案：描述了设计的组成部分，它们之间的相互关系、各自职责、协作方式    </li>
+<li>效果：描述了模式应用的效果、使用模式应权衡的问题     </li>
+</ol>
+<ul>
+<li>描述设计模式：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">模式名和分类:模式名简洁地描述了模式的本质。</span><br><span class="line">意图:是回答下列问题的简单陈述：设计模式是做什么的？它的基本原理和意图是什么？它解决的是什么样的特定设计问题？</span><br><span class="line">别名:模式的其他名称。</span><br><span class="line">动机:用以说明一个设计问题以及如何用模式中的类、对象来解决该问题的特定情景。该情景会帮助你理解随后对模式更抽象的描述。</span><br><span class="line">适用性:什么情况下可以使用该设计模式？该模式可用来改进哪些不良设计？你怎样识别这些情况？</span><br><span class="line">结构:采用基于对象建模技术的表示法对模式中的类进行图形描述。我们也使用了交互图 来说明对象之间的请求序列和协作关系。</span><br><span class="line">参与者:指设计模式中的类和/或对象以及它们各自的职责。</span><br><span class="line">协作:模式的参与者怎样协作以实现它们的职责</span><br><span class="line">效果:模式怎样支持它的目标？使用模式的效果和所需做的权衡取舍？系统结构的哪些方面可以独立改变？</span><br><span class="line">实现:实现模式时需要知道的一些提示、技术要点及应避免的缺陷，以及是否存在某些特定于实现语言的问题。</span><br><span class="line">代码示例:用来说明怎样实现该模式的代码片段</span><br><span class="line">已知应用:实际系统中发现的模式的例子</span><br><span class="line">相关模式:与这个模式紧密相关的模式有哪些？其间重要的不同之处是什么？这个模式应与哪些其他模式一起使用？</span><br></pre></td></tr></table></figure></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>–</th>
+<th>创建型</th>
+<th>结构型</th>
+<th>行为型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类</td>
+<td>Factory Method</td>
+<td>Adapter</td>
+<td>Interpreter、Template Method</td>
+</tr>
+<tr>
+<td>对象</td>
+<td>Abstract Factory、Builder、Prototype、Singleton</td>
+<td>Adapter、Bridge、Composite、Decorator、Facade、Flyweight、Proxy</td>
+<td>Chain Of Responsibility、Command、Iterator、Mediator、Memento、Observer、State、Stratege、Visitor</td>
+</tr>
+</tbody></table>
+<ul>
+<li>目的准则：模式是用来完成什么工作的    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">创建型：与对象的创建有关</span><br><span class="line">结构型：处理类和对象的组合</span><br><span class="line">行为型：对类和对象怎么交互、怎样分配职责进行描述</span><br></pre></td></tr></table></figure></li>
+<li>范围准则：执行模式用于类还是用于对象  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">类模式：处理类和子类之间的关系，这些关系通过继承建立，是静态的，在编译时刻就确定    </span><br><span class="line">对象模式：处理对象间的关系，这些关系在运行时刻可变，是动态的</span><br><span class="line">几乎所有模式都使用继承机制，所以“类模式”只指那些集于处理类间关系的模式，大部分模式都属于“对象模式”的范畴</span><br><span class="line">创建型的类模式将对象的部分创建工作延迟到子类，而创建型的对象模式将它延迟到另一个对象中</span><br><span class="line">结构型的类模式使用继承机制来组合类，而结构型的对象模式则描述了对象的组装方式</span><br><span class="line">行为型的类模式使用继承描述算法和控制流，而行为型的对象模式则描述一组对象怎么协作完成单个对象所无法完成的任务</span><br></pre></td></tr></table></figure></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Caigxg</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://dailyup.top/2022/04/07/lang/java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">http://dailyup.top/2022/04/07/lang/java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://dailyup.top" target="_blank">butterfly</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/04/07/lang/java/%E9%9B%86%E5%90%88/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2022/04/07/lang/java/IO%E4%B8%8ENIO/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Caigxg</div><div class="author-info__description">观空舍执，直面真如</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">偶有更新</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83%E5%A4%A7%E5%8E%9F%E5%88%99"><span class="toc-number">1.</span> <span class="toc-text">七大原则</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99"><span class="toc-number">1.1.</span> <span class="toc-text">单一职责原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99"><span class="toc-number">1.2.</span> <span class="toc-text">接口隔离原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E5%80%92%E8%BD%AC%E5%8E%9F%E5%88%99"><span class="toc-number">1.3.</span> <span class="toc-text">依赖倒转原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E7%9A%84%E4%B8%89%E7%A7%8D%E4%BC%A0%E9%80%92%E6%96%B9%E5%BC%8F"><span class="toc-number">1.3.1.</span> <span class="toc-text">依赖关系的三种传递方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E4%BC%A0%E9%80%92"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">接口传递</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E4%BC%A0%E9%80%92"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">构造方法传递</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#setter%E6%96%B9%E5%BC%8F%E4%BC%A0%E9%80%92"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">setter方式传递</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99"><span class="toc-number">1.4.</span> <span class="toc-text">里氏替换原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99"><span class="toc-number">1.5.</span> <span class="toc-text">开闭原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%88%99"><span class="toc-number">1.6.</span> <span class="toc-text">迪米特法则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%88%E6%88%90%E5%A4%8D%E7%94%A8%E5%8E%9F%E5%88%99"><span class="toc-number">1.7.</span> <span class="toc-text">合成复用原则</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%AE%80%E4%BB%8B"><span class="toc-number">2.</span> <span class="toc-text">设计模式简介</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/12/lang/python/python/" title="python"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python"/></a><div class="content"><a class="title" href="/2022/04/12/lang/python/python/" title="python">python</a><time datetime="2022-04-12T11:14:30.000Z" title="发表于 2022-04-12 19:14:30">2022-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/other/git/" title="git"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git"/></a><div class="content"><a class="title" href="/2022/04/11/other/git/" title="git">git</a><time datetime="2022-04-11T10:37:30.000Z" title="发表于 2022-04-11 18:37:30">2022-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/db2/" title="db2"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="db2"/></a><div class="content"><a class="title" href="/2022/04/07/database/db2/" title="db2">db2</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/mysql/" title="mysql"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mysql"/></a><div class="content"><a class="title" href="/2022/04/07/database/mysql/" title="mysql">mysql</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/db2-errorCode/" title="db2-errorCode"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="db2-errorCode"/></a><div class="content"><a class="title" href="/2022/04/07/database/db2-errorCode/" title="db2-errorCode">db2-errorCode</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Caigxg</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

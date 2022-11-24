@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>butterfly | butterfly</title><meta name="author" content="Caigxg"><meta name="copyright" content="Caigxg"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="[toc] 定义代码中的特殊标记，这些标记可以在编译、类加载、运行时被读取，并执行相对应的处理 特点传统的方式，我们是通过配置文件(xml文件)来告诉类是如何运行的,有了注解技术以后，我们就可以通过注解告诉类如何运行 基本Annotationjava.lang包下的5个基本注解 1. @Override告诉编译器要检查该方法是实现父类的…可以帮我们避免一些低级的错误: 比如，我们在实现equals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="butterfly">
+<meta property="og:url" content="http://dailyup.top/2022/04/07/lang/java/%E6%B3%A8%E8%A7%A3/index.html">
+<meta property="og:site_name" content="butterfly">
+<meta property="og:description" content="[toc] 定义代码中的特殊标记，这些标记可以在编译、类加载、运行时被读取，并执行相对应的处理 特点传统的方式，我们是通过配置文件(xml文件)来告诉类是如何运行的,有了注解技术以后，我们就可以通过注解告诉类如何运行 基本Annotationjava.lang包下的5个基本注解 1. @Override告诉编译器要检查该方法是实现父类的…可以帮我们避免一些低级的错误: 比如，我们在实现equals">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2022-04-07T13:54:17.557Z">
+<meta property="article:modified_time" content="2022-04-07T13:54:17.557Z">
+<meta property="article:author" content="Caigxg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://dailyup.top/2022/04/07/lang/java/%E6%B3%A8%E8%A7%A3/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'butterfly',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-07 21:54:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">butterfly</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-07T13:54:17.557Z" title="发表于 2022-04-07 21:54:17">2022-04-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-07T13:54:17.557Z" title="更新于 2022-04-07 21:54:17">2022-04-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>[toc]</p>
+<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p><strong>代码中的特殊标记</strong>，这些标记可以<strong>在编译、类加载、运行时被读取，并执行相对应的处理</strong></p>
+<h1 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h1><p>传统的方式，我们是通过<strong>配置文件(xml文件)来告诉类是如何运行的</strong>,有了注解技术以后，我们就可以<strong>通过注解告诉类如何运行</strong></p>
+<h1 id="基本Annotation"><a href="#基本Annotation" class="headerlink" title="基本Annotation"></a>基本Annotation</h1><p>java.lang包下的5个基本注解</p>
+<h2 id="1-Override"><a href="#1-Override" class="headerlink" title="1. @Override"></a>1. @Override</h2><p>告诉编译器要检查<strong>该方法是实现父类的</strong>…可以帮我们避免一些低级的错误:</p>
+<p>比如，我们在实现equals()方法的时候，把euqals()打错了，那么<strong>编译器就会发现该方法并不是实现父类的，与注解@Override冲突，于是就会给予错误</strong></p>
+<h2 id="2-Deprecated"><a href="#2-Deprecated" class="headerlink" title="2. @Deprecated"></a>2. @Deprecated</h2><p>Java在设计的时候，可能觉得某些方法设计得不好，<strong>为了兼容以前的程序，是不能直接把它抛弃的，于是就设置它为过时</strong></p>
+<h2 id="3-SuppressWarnings"><a href="#3-SuppressWarnings" class="headerlink" title="3. @SuppressWarnings"></a>3. @SuppressWarnings</h2><p><strong>让编译器不给予我们警告</strong></p>
+<h2 id="4-SafeVarargs"><a href="#4-SafeVarargs" class="headerlink" title="4. @SafeVarargs"></a>4. @SafeVarargs</h2><p><strong>Java 7“堆污染”警告</strong></p>
+<p>堆污染:<strong>当把一个不是泛型的集合赋值给一个带泛型的集合的时候</strong></p>
+<h2 id="5-FunctionalInterface"><a href="#5-FunctionalInterface" class="headerlink" title="5. @FunctionalInterface"></a>5. @FunctionalInterface</h2><p><strong>用来指定该接口是函数式接口</strong></p>
+<h1 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h1><h2 id="定义注解"><a href="#定义注解" class="headerlink" title="定义注解"></a>定义注解</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@Target(&#123;ElementType.METHOD,ElementType.TYPE&#125;)  //注解作用域 CONSTRUCTOR:构造方法；FIELD:字段声明;LOCAL_VARIABLE:局部变量声明;METHOD:方法声明;PACKAGE:包声明;PATAMETER:参数声明;TYPE:类，接口</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)   //生命周期  SOURCE:只在源码显示;CLASS:编译时记录到class中，运行时忽略;RUNTIME:运行时存在，可通过反射读取</span><br><span class="line">@Inherited   //允许子类继承</span><br><span class="line">@Documented   //生成javadoc时会包含注解</span><br><span class="line">public @interface Description&#123;   //需要使用@interface关键字定义注解</span><br><span class="line">    //可以没有成员</span><br><span class="line">    //成员类型受限：原始类型、String、Class、Annotation、Enumeration</span><br><span class="line">    //注解只有一个成员时，成员名必须为value(),使用时可以忽略成员名和赋值号=</span><br><span class="line">    String desc();  //成员以无参、无异常方式声明</span><br><span class="line">    int age() default 18;  //可以用default为成员指定默认值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用注解"><a href="#使用注解" class="headerlink" title="使用注解"></a>使用注解</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">//根据定义注解时的作用域@Target决定使用范围</span><br><span class="line">@Description(desc=&quot;hello&quot;,age=18)</span><br><span class="line">public class Person()&#123;      //定义一个类来使用注解</span><br><span class="line">	@MyAnno(name=&quot;test&quot;,age=10)</span><br><span class="line">    public void show(String name ,int age) &#123;</span><br><span class="line">        System.out.println(&quot;name--&gt;&quot;+name+&quot;\nage--&gt;&quot;+age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//通过反射调使用注解的类，获取该类上注解的值</span><br><span class="line">public class demo()&#123;</span><br><span class="line">    Class pclass = new Person().getClass();</span><br><span class="line">    boolean isExit = pclass.isAnnotationPresent(MyAnno.class);</span><br><span class="line">    if (!isExit) &#123;</span><br><span class="line">        System.out.println(&quot;MaAnno注解不存在&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    //获取类上的注解值</span><br><span class="line">    MyAnno myAnno = (MyAnno) pclass.getAnnotation(MyAnno.class);</span><br><span class="line">    String name=myAnno.name();   </span><br><span class="line">    </span><br><span class="line">    //获取方法上的注解值</span><br><span class="line">    Method method = aClass.getMethod(&quot;show&quot;, String.class, int.class);</span><br><span class="line">    MyAnno myAnno1 = method.getAnnotation(MyAnno.class);</span><br><span class="line">    String name = myAnno1.name();</span><br><span class="line">    int age = myAnno1.age();</span><br><span class="line">    Object o = aClass.newInstance();</span><br><span class="line">    method.invoke(o, name, age);//调用类的方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Caigxg</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://dailyup.top/2022/04/07/lang/java/%E6%B3%A8%E8%A7%A3/">http://dailyup.top/2022/04/07/lang/java/%E6%B3%A8%E8%A7%A3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://dailyup.top" target="_blank">butterfly</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/04/07/lang/java/%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2022/04/07/lang/java/%E8%A7%A3%E6%9E%90xml/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Caigxg</div><div class="author-info__description">观空舍执，直面真如</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">偶有更新</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%89%B9%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%ACAnnotation"><span class="toc-number">3.</span> <span class="toc-text">基本Annotation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Override"><span class="toc-number">3.1.</span> <span class="toc-text">1. @Override</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Deprecated"><span class="toc-number">3.2.</span> <span class="toc-text">2. @Deprecated</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-SuppressWarnings"><span class="toc-number">3.3.</span> <span class="toc-text">3. @SuppressWarnings</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-SafeVarargs"><span class="toc-number">3.4.</span> <span class="toc-text">4. @SafeVarargs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-FunctionalInterface"><span class="toc-number">3.5.</span> <span class="toc-text">5. @FunctionalInterface</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3"><span class="toc-number">4.</span> <span class="toc-text">自定义注解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3"><span class="toc-number">4.1.</span> <span class="toc-text">定义注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="toc-number">4.2.</span> <span class="toc-text">使用注解</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/12/lang/python/python/" title="python"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python"/></a><div class="content"><a class="title" href="/2022/04/12/lang/python/python/" title="python">python</a><time datetime="2022-04-12T11:14:30.000Z" title="发表于 2022-04-12 19:14:30">2022-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/other/git/" title="git"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git"/></a><div class="content"><a class="title" href="/2022/04/11/other/git/" title="git">git</a><time datetime="2022-04-11T10:37:30.000Z" title="发表于 2022-04-11 18:37:30">2022-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/db2/" title="db2"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="db2"/></a><div class="content"><a class="title" href="/2022/04/07/database/db2/" title="db2">db2</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/mysql/" title="mysql"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mysql"/></a><div class="content"><a class="title" href="/2022/04/07/database/mysql/" title="mysql">mysql</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/db2-errorCode/" title="db2-errorCode"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="db2-errorCode"/></a><div class="content"><a class="title" href="/2022/04/07/database/db2-errorCode/" title="db2-errorCode">db2-errorCode</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Caigxg</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

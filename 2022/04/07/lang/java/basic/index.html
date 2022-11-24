@@ -1,0 +1,301 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>butterfly | butterfly</title><meta name="author" content="Caigxg"><meta name="copyright" content="Caigxg"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="[toc] 基本数据类型java7引入了可以自由使用下划线来分隔数值int a &#x3D; 3_1_2; 整数类型   类型 字节数 占内存位数 值范围    byte 1 8 -2^7-2^7-1   short 2 16 -2^15-2^15-1   int 4 32 -2^31-2^31-1   long 8 64 -2^63-2^63-1   tips:  直接定义一个整数,默认为int类型 把在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="butterfly">
+<meta property="og:url" content="http://dailyup.top/2022/04/07/lang/java/basic/index.html">
+<meta property="og:site_name" content="butterfly">
+<meta property="og:description" content="[toc] 基本数据类型java7引入了可以自由使用下划线来分隔数值int a &#x3D; 3_1_2; 整数类型   类型 字节数 占内存位数 值范围    byte 1 8 -2^7-2^7-1   short 2 16 -2^15-2^15-1   int 4 32 -2^31-2^31-1   long 8 64 -2^63-2^63-1   tips:  直接定义一个整数,默认为int类型 把在">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2022-04-07T13:54:17.553Z">
+<meta property="article:modified_time" content="2022-04-07T13:54:17.553Z">
+<meta property="article:author" content="Caigxg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://dailyup.top/2022/04/07/lang/java/basic/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'butterfly',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-07 21:54:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">butterfly</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-07T13:54:17.553Z" title="发表于 2022-04-07 21:54:17">2022-04-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-07T13:54:17.553Z" title="更新于 2022-04-07 21:54:17">2022-04-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>[toc]</p>
+<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><p>java7引入了可以自由使用下划线来分隔数值<br>int a = 3_1_2;</p>
+<h2 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>字节数</th>
+<th>占内存位数</th>
+<th>值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>1</td>
+<td>8</td>
+<td>-2^7-2^7-1</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2</td>
+<td>16</td>
+<td>-2^15-2^15-1</td>
+</tr>
+<tr>
+<td>int</td>
+<td>4</td>
+<td>32</td>
+<td>-2^31-2^31-1</td>
+</tr>
+<tr>
+<td>long</td>
+<td>8</td>
+<td>64</td>
+<td>-2^63-2^63-1</td>
+</tr>
+</tbody></table>
+<p>tips:</p>
+<ol>
+<li>直接定义一个整数,默认为int类型</li>
+<li>把在byte或short表数范围的整数赋给byte或short,系统会自动把这个整数当成byte或short处理</li>
+<li>如果将超出int表数范围的整数当成long类型,需要在整数后加L(大小写均可) long l = 99999999L</li>
+</ol>
+<h3 id="进制表示"><a href="#进制表示" class="headerlink" title="进制表示"></a>进制表示</h3><ul>
+<li>二进制:以0b或0B开头</li>
+<li>八进制:以0开头</li>
+<li>十六进制:以0x或0X开头,10-15分别以a-f(不区分大小写)表示<h2 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">值必须用&#x27;&#x27;(单引号)括起来: char c = &#x27;A&#x27;</span><br><span class="line">char 2字节</span><br></pre></td></tr></table></figure>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3>转义字符|说明|Unicode表示方式</li>
+</ul>
+<p>–|–|–<br>\b|退格符|\u0008<br>\n|换行符|\u000a<br>\r|回车符|\u000d<br>\t|制表符|\u0009<br>&quot;|双引号|\u0022<br>&#39;|单引号|\u0027<br>\|反斜线|\u005c</p>
+<h2 id="浮点类型-可以用科学计数法表示"><a href="#浮点类型-可以用科学计数法表示" class="headerlink" title="浮点类型:可以用科学计数法表示"></a>浮点类型:可以用科学计数法表示</h2><p>浮点类型有固定的表述范围和字段长度</p>
+<h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">值后要跟f(不区分大小写) float f = 1.1F</span><br><span class="line">单精度 4字节 32位</span><br><span class="line">第1位:符号位</span><br><span class="line">2-9位:指数</span><br><span class="line">10-32位:位数</span><br></pre></td></tr></table></figure>
+<h3 id="double"><a href="#double" class="headerlink" title="double"></a>double</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">双精度 8字节 64位</span><br><span class="line">第1位:符号位</span><br><span class="line">2-12位:指数</span><br><span class="line">13-64位:位数</span><br></pre></td></tr></table></figure>
+<h2 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h2><p>占8位,值只能位true或false</p>
+<h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><h2 id="自动类型提升-表数范围小的可以自动提升到表数范围大的-如byte-short和char可以自动提升到int"><a href="#自动类型提升-表数范围小的可以自动提升到表数范围大的-如byte-short和char可以自动提升到int" class="headerlink" title="自动类型提升:表数范围小的可以自动提升到表数范围大的:如byte short和char可以自动提升到int"></a>自动类型提升:表数范围小的可以自动提升到表数范围大的:如byte short和char可以自动提升到int</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">short s = 4;</span><br><span class="line">s=s+1;运算错误,右边的运算为int的运算,赋值给short时报错</span><br></pre></td></tr></table></figure>
+<h2 id="强制类型转换-表数范围大的向表数小的进行类型转换-会有精度损失"><a href="#强制类型转换-表数范围大的向表数小的进行类型转换-会有精度损失" class="headerlink" title="强制类型转换:表数范围大的向表数小的进行类型转换:会有精度损失"></a>强制类型转换:表数范围大的向表数小的进行类型转换:会有精度损失</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int a = (int)4.5;</span><br></pre></td></tr></table></figure>
+<h2 id="字符串与数值间转换"><a href="#字符串与数值间转换" class="headerlink" title="字符串与数值间转换"></a>字符串与数值间转换</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int a = Integer.parseInt(&quot;4&quot;);</span><br></pre></td></tr></table></figure>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ol>
+<li>数组中的元素类型是唯一的</li>
+<li>数组的初始化一旦完成,在内存中所占的空间将被固定下来,因此数组的长度不可改变</li>
+<li>定义方式<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">定义数组时,不能指定数组的长度</span><br><span class="line">type[] arr :一般使用这种</span><br><span class="line">type arrp[]</span><br></pre></td></tr></table></figure></li>
+<li>初始化的方式<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.静态初始化:程序员显示指定每个数组元素的初始值,系统决定数组长度</span><br><span class="line">2.动态初始化:程序员只指定数组长度,系统为数组元素分配初始值</span><br><span class="line">不能同时进行静态初始化和动态初始化</span><br><span class="line"></span><br><span class="line">int[] arr = new int[]&#123;1,2,3&#125;;</span><br><span class="line">int[] arr =&#123;1,2,3&#125;;</span><br><span class="line">int[] arr = new int[3];</span><br></pre></td></tr></table></figure></li>
+<li>foreach<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (type var:arry)&#123;</span><br><span class="line">  operate(var);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="类"><a href="#类" class="headerlink" title="类"></a>类</h1></li>
+</ol>
+<ul>
+<li>静态成员不能直接访问非静态成员</li>
+<li>个数可变的形参只能处于形参列表的最后,并且一个方法中只能包含一个个数可变的形参</li>
+<li>创建一个对象时,系统先为该对象的所有实例变量分配内存(前提是该类已经被加载),然后初始化实例变量,顺序为:1-执行实例初始化块或声明实例变量时指定的初始值;2-执行构造器里指定的初始值<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2></li>
+</ul>
+<ol>
+<li>只能继承成员变量 方法 内部类,不能获得构造器和初始化块</li>
+<li>单继承:一个类只能有一个直接父类</li>
+<li>重写父类方法:两同两小一大<br>3.1 方法名相同;形参列表相同<br>3.2 子类方法返回值类型比父类的更小或相等;子类方法声明抛出的异常比父类的更小或相等<br>3.3 子类方法的访问权限比父类的更大或相等<br>3.4 重写的方法要一致:都为实例方法或都为类方法<br>3.5 父类private修饰的方法,子类无法重写,如果子类有相同方法,算子类新建的方法<br>3.6 通过super关键字,可以访问父类中隐藏的实例变量</li>
+<li>子类中没有显示指定成员变量a的调用者时,查找a的顺序:<br>4.1 该方法中是否有名为a的局部变量<br>4.2 当前类中是否有名为a的成员变量<br>4.3 当前类的直接父类中,是否包含名为a的成员变量,如果没有,则依次上溯所有父类,java.lang.Object也找不到时,则编译报错</li>
+<li>程序创建一个子类对象时,会为该类中定义的实例变量分配内存,也会为它从父类继承得到的所有实例变量分配内存;如果子类定义了和父类相同名称的变量,系统依然会为父类中定义的被隐藏的变量分配内存空间</li>
+<li>调用子类构造器初始化子类对象时,父类构造器总会在子类构造器之前执行</li>
+<li>为保证父类的封装性,父类的设计原则<br>7.1 尽量隐藏内部数据:用private修饰成员变量,不让子类直接访问<br>7.2 不让子类随意访问 修改父类方法:尽量使用private修饰;必须使用public修饰又不希望子类重写方法的,可以用final修饰;希望方法可以被子类重写,但不希望被其他类访问,可以用protected修饰</li>
+</ol>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p>定义:相同类型的变量,调用同一个方法时呈现出多种不同的行为特征<br>引用的变量类型:1-编译时类型;2-运行时类型</p>
+<ol>
+<li>java允许把一个子类对象直接赋值给一个父类引用变量,无需任何类型转换,由系统自动完成</li>
+<li>强制类型转换:(父类对象赋值给子类引用变量时)<br>2.1 基本类型只能在数值类型间转换(整数型 字符型 浮点型)<br>2.2 引用类型之间的转换只能在具有继承关系的两个类型之间进行<br>2.3 转换时可能出现异常,可以先用instanceof进行判断是否可以成功转换<h2 id="重写equals-方法"><a href="#重写equals-方法" class="headerlink" title="重写equals()方法"></a>重写equals()方法</h2></li>
+<li>自反性:对任意的x,x.equals(X)一定返回true</li>
+<li>对称性:对任意的x,y,如果x.equals(y)返回true,那么y.equals(x)也返回true</li>
+<li>传递性:x,y,z,x=y,y=z时,x=z</li>
+<li>一致性:对任意的x,y,如果对象中用于等价比较的信息没有改变,那么无论调用equals()多少次,返回的结果应保持一直</li>
+<li>非空性:对任何不是null的x,x.equals(null)一定返回false<h2 id="final修饰符"><a href="#final修饰符" class="headerlink" title="final修饰符"></a>final修饰符</h2><h3 id="成员变量-必须由程序员显式地指定初始值"><a href="#成员变量-必须由程序员显式地指定初始值" class="headerlink" title="成员变量:必须由程序员显式地指定初始值"></a>成员变量:必须由程序员显式地指定初始值</h3>类变量,实例变量指定初始值的方式:</li>
+<li>类变量:静态初始代码块;声明时指定(只能2选1)</li>
+<li>实例变量:非静态初始代码块;声明时;构造器(只能3选1)<h3 id="局部变量-必须由程序员显式地指定初始值"><a href="#局部变量-必须由程序员显式地指定初始值" class="headerlink" title="局部变量:必须由程序员显式地指定初始值"></a>局部变量:必须由程序员显式地指定初始值</h3>指定初始值方式:</li>
+<li>定义时指定默认值</li>
+<li>定义时未指定默认值,可以在后面赋值一次(只能一次)<h3 id="基本类型变量和引用类型变量区别"><a href="#基本类型变量和引用类型变量区别" class="headerlink" title="基本类型变量和引用类型变量区别"></a>基本类型变量和引用类型变量区别</h3></li>
+<li>基本类型变量不能重新赋值</li>
+<li>引用类型变量引用的地址不变(引用同一个对象),但对象可以发生改变<h3 id="宏替换"><a href="#宏替换" class="headerlink" title="宏替换"></a>宏替换</h3>满足下面三个条件时,final变量相当于一个直接量,编译器会把程序中所有用到该变量的地方直接替换成该变量的值:</li>
+<li>final修饰符修饰</li>
+<li>定义变量时指定了初始值</li>
+<li>该初始值在编译时就确定下来了<br>除了可以直接为final变量赋值外,如果被赋的表达式是基本的算术表达式或字符串连接运算,没有访问普通变量,调用方法,编译器同样会把final变量当成宏变量处理<h3 id="方法-不可被重写-可以重载"><a href="#方法-不可被重写-可以重载" class="headerlink" title="方法:不可被重写;可以重载"></a>方法:不可被重写;可以重载</h3><h3 id="类-不能有子类"><a href="#类-不能有子类" class="headerlink" title="类:不能有子类"></a>类:不能有子类</h3><h3 id="不可变类-创建该类的实例后-实例变量不可变-java的8个包装类-Java-lang-String都是不可变类"><a href="#不可变类-创建该类的实例后-实例变量不可变-java的8个包装类-Java-lang-String都是不可变类" class="headerlink" title="不可变类:创建该类的实例后,实例变量不可变(java的8个包装类,Java.lang.String都是不可变类)"></a>不可变类:创建该类的实例后,实例变量不可变(java的8个包装类,Java.lang.String都是不可变类)</h3>自定义不可变类规则:</li>
+<li>使用private和final修饰该类的成员变量</li>
+<li>提供带参数的构造器(或返回该实例的类方法),用于根据传入参数初始化类里的成员变量</li>
+<li>仅为该类的成员变量提供getter方法</li>
+<li>如有必要,重写hashCode()和equals()方法<h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2></li>
+<li>有抽象方法的类只能被定义为抽象类</li>
+<li>必须用abstract修饰符定义类和方法,方法不能有方法体</li>
+<li>不能被实例化,无法用new关键字来调用构造器创建抽象类的实例</li>
+<li>可以包含成员变量,方法,构造器(主要用于被子类调用),初始化块,内部类(接口,枚举)<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2></li>
+<li>不能包含构造器和初始化块</li>
+<li>可以包含静态常量的成员变量;抽象实例方法,类方法,默认方法,私有方法;内部接口,枚举</li>
+<li>可以多继承<h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2></li>
+<li>提供了更好的封装</li>
+<li>可以直接访问外部类的私有数据,但外部类不能访问内部类的实现细节</li>
+<li>适合用于仅需要一次使用的类</li>
+<li>可以使用修饰符:private protected static(外部类不可以使用)</li>
+<li>非静态内部类不能拥有静态成员<h4 id="成员内部类"><a href="#成员内部类" class="headerlink" title="成员内部类"></a>成员内部类</h4><h5 id="非静态内部类"><a href="#非静态内部类" class="headerlink" title="非静态内部类"></a>非静态内部类</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class Out&#123;</span><br><span class="line">   private class In&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>class文件有两个Out.class Out$In.class</li>
+<li>内部类方法访问变量的查找顺序:方法内 &gt; 方法所在的内部类 &gt; 内部类所在的外部类</li>
+<li>和外部类成员变量同名,可用this 外部类名.this来区分</li>
+<li>外部类访问非静态内部类的实例成员,必须显式创建内部类对象来调用访问实例成员</li>
+<li>非静态内部类必须寄生在外部类对象里,而外部类对象不必一定有非静态内部类</li>
+<li>不能有静态方法,静态成员变量,不能有静态初始化块,可以有普通初始化块</li>
+<li>其他类中调用内<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class Use&#123;</span><br><span class="line">   Out.In in = new Out().new In();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h5></li>
+<li>寄生在外部类的类本身,而不是实例中(与外部类的类相关,而不是实例相关)</li>
+<li>实例方法不能访问外部类的实例成员</li>
+<li>其他类中调用<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class Use&#123;</span><br><span class="line">   StaticOut.StaticIn in = new StaticOut.StaticIn();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="方法内部类"><a href="#方法内部类" class="headerlink" title="方法内部类"></a>方法内部类</h5></li>
+<li>不能使用访问控制符修饰</li>
+<li>不能用static修饰<h5 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h5></li>
+<li>必须继承一个父类或实现一个接口(只能一个父类或一个接口)</li>
+<li>不能是抽象类</li>
+<li>不能定义构造器(因为没有类名),可以定义初始化块</li>
+<li>java8之前,要求被局部内部类或匿名内部类访问的局部变量必须由final修饰,java8之后:局部变量相当于自动使用了final修饰<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">interface Product&#123;</span><br><span class="line">   String getName();</span><br><span class="line">&#125;</span><br><span class="line">class Use&#123;</span><br><span class="line">   test(Product p)&#123;</span><br><span class="line">      System.out.println(p.getName());</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">new Use().test(new Product()&#123;</span><br><span class="line">   public String getName()&#123;</span><br><span class="line">      return &quot;hello&quot;;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="Lambda"><a href="#Lambda" class="headerlink" title="Lambda"></a>Lambda</h2><h2 id="函数式接口"><a href="#函数式接口" class="headerlink" title="函数式接口"></a>函数式接口</h2></li>
+</ol>
+<p><strong>支持将代码块作为方法参数,用于创建只有一个抽象方法的接口</strong></p>
+<ol>
+<li>形参列表:只有一个参数时,可省略圆括号</li>
+<li>代码块:只包含一条语句时,可省略花括号;只有一条return,可省略return关键字</li>
+<li>目标类型必须是明确的函数式接口</li>
+<li>只能为函数式接口创建对象</li>
+<li>@FunctionalInterface修饰的类，编译器会检测该类是否只有一个抽象方法或接口<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//基本使用</span><br><span class="line">interface Eat&#123;</span><br><span class="line">   void eat();</span><br><span class="line">&#125;</span><br><span class="line">public class Lamb&#123;</span><br><span class="line">   public void eat(Eat e)&#123;</span><br><span class="line">      e.eat();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">new Lamb().eat(() -&gt; System.out.println(&quot;hello&quot;));</span><br><span class="line"></span><br><span class="line">//为函数式接口创建对象</span><br><span class="line">Runnable r = () -&gt; &#123;</span><br><span class="line">   System.out.println(&quot;hello&quot;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="方法引用与构造器引用"><a href="#方法引用与构造器引用" class="headerlink" title="方法引用与构造器引用"></a>方法引用与构造器引用</h3></li>
+<li>特定对象的实例方法 特定对象::实例方法</li>
+<li>类方法 类名::类方法</li>
+<li>构造器 类名::new<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@FunctionalInterface</span><br><span class="line">interface Convert&#123;</span><br><span class="line">   Integer convert(String from);</span><br><span class="line">&#125;</span><br><span class="line">Convert con = from -&gt; Integer.valueOf(from); </span><br><span class="line">Convert con = Integer::valueOf;//调用类方法</span><br><span class="line"></span><br><span class="line">Convert con = &quot;hello&quot;::indexOf;//特定对象的实例方法</span><br></pre></td></tr></table></figure>
+<h2 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h2></li>
+<li>继承java.lang.Enum</li>
+<li>使用enum定义,非抽象的枚举类默认用final修饰</li>
+<li>枚举类的构造器只能用private访问控制符</li>
+<li>枚举类的所有实例必须在枚举类的第一行显式列出,系统会自动添加public static final</li>
+<li>可以定义成员变量,方法和构造器</li>
+<li>可以实现一个或多个接口</li>
+<li>非抽象枚举类默认用final修饰;包含了抽象方法,就是抽象枚举类,弄人用abstract修饰<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public enum Season&#123;</span><br><span class="line">   SPRING,SUMMER,FALL,WINTER;</span><br><span class="line">&#125;</span><br><span class="line">public enum Operation&#123;</span><br><span class="line">   ADD&#123;</span><br><span class="line">      public double eval(double x,double y)&#123;</span><br><span class="line">         return x+y;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;;</span><br><span class="line">   public abstract double eval(double x,double y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Caigxg</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://dailyup.top/2022/04/07/lang/java/basic/">http://dailyup.top/2022/04/07/lang/java/basic/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://dailyup.top" target="_blank">butterfly</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/04/07/lang/java/%E5%8D%81%E4%B8%89%E7%A7%8D%E8%A7%84%E8%8C%83/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2022/04/07/spring/spring/IOC/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Caigxg</div><div class="author-info__description">观空舍执，直面真如</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">偶有更新</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">整数类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.1.1.</span> <span class="toc-text">进制表示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text">字符类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-number">1.2.1.</span> <span class="toc-text">转义字符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E7%B1%BB%E5%9E%8B-%E5%8F%AF%E4%BB%A5%E7%94%A8%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.3.</span> <span class="toc-text">浮点类型:可以用科学计数法表示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#float"><span class="toc-number">1.3.1.</span> <span class="toc-text">float</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#double"><span class="toc-number">1.3.2.</span> <span class="toc-text">double</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.4.</span> <span class="toc-text">布尔类型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.</span> <span class="toc-text">类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E6%8F%90%E5%8D%87-%E8%A1%A8%E6%95%B0%E8%8C%83%E5%9B%B4%E5%B0%8F%E7%9A%84%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%8A%A8%E6%8F%90%E5%8D%87%E5%88%B0%E8%A1%A8%E6%95%B0%E8%8C%83%E5%9B%B4%E5%A4%A7%E7%9A%84-%E5%A6%82byte-short%E5%92%8Cchar%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%8A%A8%E6%8F%90%E5%8D%87%E5%88%B0int"><span class="toc-number">2.1.</span> <span class="toc-text">自动类型提升:表数范围小的可以自动提升到表数范围大的:如byte short和char可以自动提升到int</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2-%E8%A1%A8%E6%95%B0%E8%8C%83%E5%9B%B4%E5%A4%A7%E7%9A%84%E5%90%91%E8%A1%A8%E6%95%B0%E5%B0%8F%E7%9A%84%E8%BF%9B%E8%A1%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2-%E4%BC%9A%E6%9C%89%E7%B2%BE%E5%BA%A6%E6%8D%9F%E5%A4%B1"><span class="toc-number">2.2.</span> <span class="toc-text">强制类型转换:表数范围大的向表数小的进行类型转换:会有精度损失</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%95%B0%E5%80%BC%E9%97%B4%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.3.</span> <span class="toc-text">字符串与数值间转换</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">3.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">4.</span> <span class="toc-text">类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">4.1.</span> <span class="toc-text">继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E6%80%81"><span class="toc-number">4.2.</span> <span class="toc-text">多态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%86%99equals-%E6%96%B9%E6%B3%95"><span class="toc-number">4.3.</span> <span class="toc-text">重写equals()方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#final%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">4.4.</span> <span class="toc-text">final修饰符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F-%E5%BF%85%E9%A1%BB%E7%94%B1%E7%A8%8B%E5%BA%8F%E5%91%98%E6%98%BE%E5%BC%8F%E5%9C%B0%E6%8C%87%E5%AE%9A%E5%88%9D%E5%A7%8B%E5%80%BC"><span class="toc-number">4.4.1.</span> <span class="toc-text">成员变量:必须由程序员显式地指定初始值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F-%E5%BF%85%E9%A1%BB%E7%94%B1%E7%A8%8B%E5%BA%8F%E5%91%98%E6%98%BE%E5%BC%8F%E5%9C%B0%E6%8C%87%E5%AE%9A%E5%88%9D%E5%A7%8B%E5%80%BC"><span class="toc-number">4.4.2.</span> <span class="toc-text">局部变量:必须由程序员显式地指定初始值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%8F%98%E9%87%8F%E5%92%8C%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E5%8F%98%E9%87%8F%E5%8C%BA%E5%88%AB"><span class="toc-number">4.4.3.</span> <span class="toc-text">基本类型变量和引用类型变量区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8F%E6%9B%BF%E6%8D%A2"><span class="toc-number">4.4.4.</span> <span class="toc-text">宏替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-%E4%B8%8D%E5%8F%AF%E8%A2%AB%E9%87%8D%E5%86%99-%E5%8F%AF%E4%BB%A5%E9%87%8D%E8%BD%BD"><span class="toc-number">4.4.5.</span> <span class="toc-text">方法:不可被重写;可以重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB-%E4%B8%8D%E8%83%BD%E6%9C%89%E5%AD%90%E7%B1%BB"><span class="toc-number">4.4.6.</span> <span class="toc-text">类:不能有子类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%B1%BB-%E5%88%9B%E5%BB%BA%E8%AF%A5%E7%B1%BB%E7%9A%84%E5%AE%9E%E4%BE%8B%E5%90%8E-%E5%AE%9E%E4%BE%8B%E5%8F%98%E9%87%8F%E4%B8%8D%E5%8F%AF%E5%8F%98-java%E7%9A%848%E4%B8%AA%E5%8C%85%E8%A3%85%E7%B1%BB-Java-lang-String%E9%83%BD%E6%98%AF%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%B1%BB"><span class="toc-number">4.4.7.</span> <span class="toc-text">不可变类:创建该类的实例后,实例变量不可变(java的8个包装类,Java.lang.String都是不可变类)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-number">4.5.</span> <span class="toc-text">抽象类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-number">4.6.</span> <span class="toc-text">接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">4.7.</span> <span class="toc-text">内部类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%90%E5%91%98%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">4.7.0.1.</span> <span class="toc-text">成员内部类</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%9E%E9%9D%99%E6%80%81%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">4.7.0.1.1.</span> <span class="toc-text">非静态内部类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">4.7.0.1.2.</span> <span class="toc-text">静态内部类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">4.7.0.1.3.</span> <span class="toc-text">方法内部类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">4.7.0.1.4.</span> <span class="toc-text">匿名内部类</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lambda"><span class="toc-number">4.8.</span> <span class="toc-text">Lambda</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3"><span class="toc-number">4.9.</span> <span class="toc-text">函数式接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8%E4%B8%8E%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8"><span class="toc-number">4.9.1.</span> <span class="toc-text">方法引用与构造器引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%9A%E4%B8%BE%E7%B1%BB"><span class="toc-number">4.10.</span> <span class="toc-text">枚举类</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/12/lang/python/python/" title="python"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python"/></a><div class="content"><a class="title" href="/2022/04/12/lang/python/python/" title="python">python</a><time datetime="2022-04-12T11:14:30.000Z" title="发表于 2022-04-12 19:14:30">2022-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/other/git/" title="git"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git"/></a><div class="content"><a class="title" href="/2022/04/11/other/git/" title="git">git</a><time datetime="2022-04-11T10:37:30.000Z" title="发表于 2022-04-11 18:37:30">2022-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/db2/" title="db2"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="db2"/></a><div class="content"><a class="title" href="/2022/04/07/database/db2/" title="db2">db2</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/mysql/" title="mysql"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mysql"/></a><div class="content"><a class="title" href="/2022/04/07/database/mysql/" title="mysql">mysql</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/db2-errorCode/" title="db2-errorCode"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="db2-errorCode"/></a><div class="content"><a class="title" href="/2022/04/07/database/db2-errorCode/" title="db2-errorCode">db2-errorCode</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Caigxg</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

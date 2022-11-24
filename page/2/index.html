@@ -55,7 +55,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2022-04-07 21:23:40'
+  postUpdate: '2022-11-24 19:53:33'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -144,29 +144,223 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">butterfly</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">butterfly</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2021/10/26/linux/vim/" title="vim">vim</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-26T13:31:00.000Z" title="发表于 2021-10-26 21:31:00">2021-10-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a></span></div><div class="content">查看是否能使用系统剪切板12345# 方式1vim --version | grep clipboard # +clipboard为支持# 方式2vim:echo has(&quot;clipboard&quot;)  # 1为支持
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">butterfly</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">butterfly</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/04/07/lang/java/%E6%B3%9B%E5%9E%8B/" title="无题">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/07/lang/java/%E6%B3%9B%E5%9E%8B/" title="无题">无题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-07T13:54:17.557Z" title="发表于 2022-04-07 21:54:17">2022-04-07</time></span></div><div class="content">[toc]
+定义把类型明确的工作推迟到创建对象或调用方法的时候才去明确的特殊的类型
+设计原则只要在编译时期没有出现警告，那么运行时期就不会出现ClassCastException异常
+相关术语
+ArrayList&lt;E&gt;中的E称为类型参数变量
+ArrayList&lt;Integer&gt;中的Integer称为实际类型参数
+整个称为ArrayList&lt;E&gt;泛型类型
+整个ArrayList&lt;Integer&gt;称为参数化的类型ParameterizedType
 
-配置12345678910111213141516171819202122232425vim ~/.vimrc&quot;默认使用系统剪切板&quot;set clipboard=unnamedplus &quot;显示行号&quot;set nu &quot;语法高亮&quot;syntax on &quot;使用utf-8编码&quot;set encoding=utf-8 &quot;显示光标所在行的行号，其它行都为相对改行的行号&quot;set relativenumber &quot;光标所在的当前行高亮&quot;set cursorline &quot;自动拆行,关闭用set nowtap &quot;set wrap &quot;在状态栏显示光标的当前位置（位于哪一行哪一列）&quot;set ruler &quot;光标遇到圆括号、方 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2021/10/19/linux/shell/" title="shell">shell</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-19T13:52:08.000Z" title="发表于 2021-10-19 21:52:08">2021-10-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a></span></div><div class="content">书籍《Linux Shell脚本攻略（第3版）》
-脚本执行方法1.使用bash执行1bash hello.sh
+特点早期Java是使用Object来代表任意类型的，但是向下转型有强转的问题，这样程序就不太安全
 
-2.使用source执行1bash hello.sh
+代码更加简洁【不用强制转换】
+程序更加健壮【只要编译时期没有警告，那么运行时期就不会出现ClassCastException异常】
+可读性和稳定性【在编写集合的时候，就限定了类型】
 
-3.赋予执行权限12chmod +x hello.sh./hello.sh
+泛型基础泛型类把泛型定义在类上，用户使用该类的时候，才把类型明确下来,这样的话，用户明确了什么类型，该类就代表着什么类型…用户在使用的时候就不用担心强转的问题，运行时转换异常的问题了。
+类上定义的泛型,方法中也可以使用 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/04/07/lang/java/%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93/" title="无题">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/07/lang/java/%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%BA%93/" title="无题">无题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-07T13:54:17.557Z" title="发表于 2022-04-07 21:54:17">2022-04-07</time></span></div><div class="content">[toc]
+Scanner可以从文件,输入流,字符串中解析数据
+123默认情况下,使用空格,tab或者回车作为多个输入项之间的分隔符var sc = new Scanner(System.in);//System.in为标准输入(键盘输入)sc.useDelimiter(&quot;\n|);//只把回车作为分隔符
+System:当前java程序的运行平台Runtime:java程序的运行时环境MathBigDecimalCalendar正则表达式合法字符
 
-文本格式123# 为注释符号#! 特殊的注释，告诉系统同一行上紧跟在它后面的那个参数是用来执行本文件的程序#!/bin/bash 一般作为文件的首行
 
-变量变量的定义1234567# 变量值区分大小写var=hello # =的左右不能有空格var=&quot;hello world&quot; # 值有空格时，必须要&quot;(双引号)或&#x27;(单引号)	# &quot;可以解析引号内的变量	# &#x27;引号内保持原本的内容echo $var # 使用$获取变量的值；标准格式 echo $&#123;var&#125; # 使用$获取变量的值；简略格式 &#123;&#125;可以帮助解释器识别变量的边界  如：$&#123;var&#125;iable与$variable 会解释为不同结果
+字符
+解释
 
-环境变量系统默认的环境变量1234 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/10/13/linux/Archlinux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/" title="Archlinux系统安装">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Archlinux系统安装"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/10/13/linux/Archlinux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/" title="Archlinux系统安装">Archlinux系统安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-10-13T12:47:08.000Z" title="发表于 2021-10-13 20:47:08">2021-10-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a></span></div><div class="content">安装系统根据 https://archlinuxstudio.github.io/ArchLinuxTutorial/#/rookie/archlinux_pre_install 成功安装，该文章写的非常详细，建议先浏览一遍有所了解。
-安装前准备U盘刻录1. 下载镜像文件：清华源下载地址：https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/，下载.iso文件2. 下载刻录软件：https://rufus.en.softonic.com/3. linux刻录1sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
-进行安装1.禁用reflector1systemctl stop reflector.service
 
-2.连接无线（建议无线名称不带中文）12345678rfkill unblock wifi		#启用无线iwctl                           #进入交互式命令行device list  ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Caigxg</div><div class="author-info__description">观空舍执，直面真如</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">偶有更新</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/web/Servlet/" title="servlet"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="servlet"/></a><div class="content"><a class="title" href="/2022/04/07/web/Servlet/" title="servlet">servlet</a><time datetime="2022-04-06T23:45:08.000Z" title="发表于 2022-04-07 07:45:08">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/web/apache/" title="apache"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="apache"/></a><div class="content"><a class="title" href="/2022/04/07/web/apache/" title="apache">apache</a><time datetime="2022-04-06T23:45:08.000Z" title="发表于 2022-04-07 07:45:08">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/web/jsp/" title="jsp"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="jsp"/></a><div class="content"><a class="title" href="/2022/04/07/web/jsp/" title="jsp">jsp</a><time datetime="2022-04-06T23:45:08.000Z" title="发表于 2022-04-07 07:45:08">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/web/nginx/" title="nginx"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="nginx"/></a><div class="content"><a class="title" href="/2022/04/07/web/nginx/" title="nginx">nginx</a><time datetime="2022-04-06T23:45:08.000Z" title="发表于 2022-04-07 07:45:08">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/web/tomcat/" title="tomcat"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="tomcat"/></a><div class="content"><a class="title" href="/2022/04/07/web/tomcat/" title="tomcat">tomcat</a><time datetime="2022-04-06T23:45:08.000Z" title="发表于 2022-04-07 07:45:08">2022-04-07</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+x
+可代表任何合法的字符
+
+
+\0mnn
+八进制数0mnn所表示的字符
+
+
+\xhh
+十六进制0xhh所表示的字符
+
+
+\uhhhh
+十六进制0xhhhh所表示的Unicode
+
+
+\t
+制表符(‘\u0009’)
+
+
+\n
+换行符(‘\u000A’)
+
+
+\r
+回车符(‘\uoooD’)
+
+
+\f
+换页符(‘\u000C’)
+
+
+\a
+报警符(‘\u0007’)
+
+
+\e
+空格符(‘\u001B’)
+
+
+\cx
+x对应的控制符;\cM匹配Ctrl-M(x值必须为a-z或A-Z)
+
+
+特殊字符
+
+
+字符
+解释
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/04/07/lang/java/%E6%B3%A8%E8%A7%A3/" title="无题">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/07/lang/java/%E6%B3%A8%E8%A7%A3/" title="无题">无题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-07T13:54:17.557Z" title="发表于 2022-04-07 21:54:17">2022-04-07</time></span></div><div class="content">[toc]
+定义代码中的特殊标记，这些标记可以在编译、类加载、运行时被读取，并执行相对应的处理
+特点传统的方式，我们是通过配置文件(xml文件)来告诉类是如何运行的,有了注解技术以后，我们就可以通过注解告诉类如何运行
+基本Annotationjava.lang包下的5个基本注解
+1. @Override告诉编译器要检查该方法是实现父类的…可以帮我们避免一些低级的错误:
+比如，我们在实现equals()方法的时候，把euqals()打错了，那么编译器就会发现该方法并不是实现父类的，与注解@Override冲突，于是就会给予错误
+2. @DeprecatedJava在设计的时候，可能觉得某些方法设计得不好，为了兼容以前的程序，是不能直接把它抛弃的，于是就设置它为过时
+3. @SuppressWarnings让编译器不给予我们警告
+4. @SafeVarargsJava 7“堆污染”警告
+堆污染:当把一个不是泛型的集合赋值给一个带泛型的集合的时候
+5. @FunctionalInterface用来指定该接口是函数式接口
+自定义注解定义注解1234567891011@Target(&#123; ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/04/07/lang/java/%E8%A7%A3%E6%9E%90xml/" title="无题">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/07/lang/java/%E8%A7%A3%E6%9E%90xml/" title="无题">无题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-07T13:54:17.557Z" title="发表于 2022-04-07 21:54:17">2022-04-07</time></span></div><div class="content">[toc]
+SAX解析
+自定义Handler
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960import org.xml.sax.Attributes;import org.xml.sax.SAXException;import org.xml.sax.helpers.DefaultHandler;public class SAXHanlder extends DefaultHandler &#123;    //遍历xml文件的开始标签    @Override    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException &#123;        super.startElement(uri, localName, qName, attrib ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/04/07/lang/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" title="无题">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/07/lang/java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" title="无题">无题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-07T13:54:17.557Z" title="发表于 2022-04-07 21:54:17">2022-04-07</time></span></div><div class="content">[toc]
+进程与线程进程系统进行资源分配和调度的独立单位。每一个进程都有它自己的内存空间和系统资源;
+资源分配的基本单位
+线程资源调度的基本单位，是程序的执行单元，执行路径(单线程：一条执行路径，多线程：多条执行路径)。是程序使用CPU的最基本单位;
+为了提高系统的执行效率，减少处理机的空转时间和调度切换的时间，以及便于系统管理。使OS具有更好的并发性
+并行与并发并行
+并行性是指同一时刻内发生两个或多个事件。
+
+并行是在不同实体上的多个事件
+并发
+并发性是指同一时间间隔内发生两个或多个事件。
+并发是在同一实体上的多个事件
+
+
+
+线程基础3个状态执行就绪阻塞5种基本操作派生阻塞激活调度结束2个基本类型用户级线程管理过程全部由用户程序完成，操作系统内核心只对进程进行管理
+系统级线程由操作系统内核进行管理。操作系统内核给应用程序提供相应的系统调用和应用程序接口API，以使用户程序可以创建、执行以及撤消线程。
+创建线程的两种方法继承Thread123456789101112131415//创建一个类，继承Threadpublic class HelloThread extends Threa ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/04/07/lang/java/%E9%9B%86%E5%90%88/" title="无题">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/07/lang/java/%E9%9B%86%E5%90%88/" title="无题">无题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-07T13:54:17.557Z" title="发表于 2022-04-07 21:54:17">2022-04-07</time></span></div><div class="content">[toc]
+Collection集合与数组对比长度数组长度固定,集合可变
+内容数组存储同一类型的元素,集合可存储多种类型(一般不这么做)
+元素的数据类型数组可以存储基本数据类型,也可以存储引用类型;
+集合只能存储引用类型(你存储的是简单的int，它会自动装箱成Integer)
+Set多线程时保护数据
+1SortedSet s = Collections.synchronizedSortedSet(new TreeSet(...))
+HashSet
+无序:排列顺序可能与添加顺序不同
+线程不安全
+元素值可以为null
+
+
+重写hashCode()的基本规则:
+
+
+程序运行中,同一个对象多次调用hashCode()方法应返回相同的值
+两个对象通过equals()方法比较返回true时,他们的hashCode()方法返回的值应相等
+对象中用作equals()方法比较的实例变量,都应该用于计算hashCode值LinkedHashSetHashSet的子类:用链表维护元素的次序,元素的顺序与添加顺序一致TreeSet
+
+
+根据元素实际值的大小排序,而不是元素的插入顺序,是红黑树的数据结构来存储元 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/04/07/lang/java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="无题">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/07/lang/java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="无题">无题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-07T13:54:17.557Z" title="发表于 2022-04-07 21:54:17">2022-04-07</time></span></div><div class="content">[toc]
+七大原则单一职责原则
+降低类的复杂度,一个类只负责一项职责
+提高类的可读性,可维护性
+降低变更风险
+通常情况下,应该遵守单一原则,只有逻辑足够简单,才可以在代码级违反单一原则职责原则:只有类中方法数量足够少,可以在方法级别保持单一职责原则
+
+接口隔离原则每个接口中不存在子类用不到却必须实现的方法，如果不然，就要将接口拆分  
+依赖倒转原则面向接口编程，依赖于抽象而不依赖于具体 ;中心思想为面向接口编程,以抽象为基础搭建的架构比细节为基础的架构要稳定
+依赖关系的三种传递方式接口传递构造方法传递setter方式传递里氏替换原则面向对象设计的基本原则之一，任何基类可以出现的地方，子类一定可以出现。子类对父类的方法尽量不要重写和重载。因为父类代表了定义好的结构，通过这个规范的接口与外界交互，子类不应该随便破坏它。  
+开闭原则开闭原则：对扩展开放，对修改关闭  
+迪米特法则表达1：一个类对自己依赖的类知道的越少越好；表达2：只与直接的朋友通信。类之间只要有耦合关系，就叫朋友关系。耦合分为依赖、关联、聚合、组合等。我们称出现为成员变量、方法参数、方法返回值中的类为直接朋友。局部变量、 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/04/07/lang/java/IO%E4%B8%8ENIO/" title="无题">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/07/lang/java/IO%E4%B8%8ENIO/" title="无题">无题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-07T13:54:17.553Z" title="发表于 2022-04-07 21:54:17">2022-04-07</time></span></div><div class="content">[toc]
+IO与NIO区别IO是面向流的处理:系统一次一个字节地处理数据;单向传输
+NIO是面向块(缓冲区)的处理:系统以块的形式处理数据;双向传输
+文件IO分类读取字符读取节点流123FileReaderPipedReaderCharArrayReader
+
+处理流12BufferedReaderInputStreamReader
+
+字节读取节点流123FileInputStreamPipedInputStreamByteArrayInputStream
+
+处理流1234BufferedInputStreamDataInputStreamObjectInputStreamSequenceInputStream
+
+写出字符写出节点流123FileWriterPipedWriterCharArrayWriter
+
+处理流123BufferedWriterInputStreamWriterPrintWriter
+
+
+
+字节写出节点流123FileOutputStreamPipedOutputStreamByteArrayOutputStream
+
+处理流1234BufferedOutpu ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/04/07/lang/java/%E5%8D%81%E4%B8%89%E7%A7%8D%E8%A7%84%E8%8C%83/" title="无题">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/07/lang/java/%E5%8D%81%E4%B8%89%E7%A7%8D%E8%A7%84%E8%8C%83/" title="无题">无题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-07T13:54:17.553Z" title="发表于 2022-04-07 21:54:17">2022-04-07</time></span></div><div class="content">
+JDBC(Java Database Connectivity):用于执行SQL语句的Java API，可以为多种关系数据库提供统一访问，它由类和接口组成
+JNDI(Java Name and Directory Interface):在Java应用中访问命名和目录服务
+EJB(Enterprise JavaBean):运行在一个独立的服务器上，并封装了业务逻辑的组件就是EJB组件。其实就是把原来放到客户端实现的代码放到服务器端，并依靠RMI进行通信.运行在一个独立的服务器上，并封装了业务逻辑的组件就是EJB组件。其实就是把原来放到客户端实现的代码放到服务器端，并依靠RMI进行通信
+RMI(Remote Method Invoke):RMI协议调用远程对象上方法。它使用了序列化方式在客户端和服务器端传递数据。RMI是非常重要的底层技术，是分布式的基础所在
+Java IDL/CORBA：Java接口定义语言/公用对象请求代理程序体系结构，在JavaIDL的支持下，开发人员可以将Java和CORBA集成在一起。
+JSP(Java Sever Pages):JSP页面=HTML+Java, ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/04/07/lang/java/basic/" title="无题">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/07/lang/java/basic/" title="无题">无题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-07T13:54:17.553Z" title="发表于 2022-04-07 21:54:17">2022-04-07</time></span></div><div class="content">[toc]
+基本数据类型java7引入了可以自由使用下划线来分隔数值int a = 3_1_2;
+整数类型
+
+
+类型
+字节数
+占内存位数
+值范围
+
+
+
+byte
+1
+8
+-2^7-2^7-1
+
+
+short
+2
+16
+-2^15-2^15-1
+
+
+int
+4
+32
+-2^31-2^31-1
+
+
+long
+8
+64
+-2^63-2^63-1
+
+
+tips:
+
+直接定义一个整数,默认为int类型
+把在byte或short表数范围的整数赋给byte或short,系统会自动把这个整数当成byte或short处理
+如果将超出int表数范围的整数当成long类型,需要在整数后加L(大小写均可) long l = 99999999L
+
+进制表示
+二进制:以0b或0B开头
+八进制:以0开头
+十六进制:以0x或0X开头,10-15分别以a-f(不区分大小写)表示字符类型12值必须用&#x27;&#x27;(单引号)括起来: char c = &#x27;A&#x27;char 2字节
+转义字符转义字符|说明|Unicode表示方式
+
+–|–|–\b|退格符|\u0008\n|换行符|\u000a\r|回 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Caigxg</div><div class="author-info__description">观空舍执，直面真如</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">偶有更新</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/12/lang/python/python/" title="python"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python"/></a><div class="content"><a class="title" href="/2022/04/12/lang/python/python/" title="python">python</a><time datetime="2022-04-12T11:14:30.000Z" title="发表于 2022-04-12 19:14:30">2022-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/other/git/" title="git"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git"/></a><div class="content"><a class="title" href="/2022/04/11/other/git/" title="git">git</a><time datetime="2022-04-11T10:37:30.000Z" title="发表于 2022-04-11 18:37:30">2022-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/db2/" title="db2"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="db2"/></a><div class="content"><a class="title" href="/2022/04/07/database/db2/" title="db2">db2</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/mysql/" title="mysql"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mysql"/></a><div class="content"><a class="title" href="/2022/04/07/database/mysql/" title="mysql">mysql</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/07/database/db2-errorCode/" title="db2-errorCode"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="db2-errorCode"/></a><div class="content"><a class="title" href="/2022/04/07/database/db2-errorCode/" title="db2-errorCode">db2-errorCode</a><time datetime="2022-04-07T14:01:30.000Z" title="发表于 2022-04-07 22:01:30">2022-04-07</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             
             </div>
             <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/"><span class="card-category-list-name">linux</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/log/"><span class="card-category-list-name">log</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/web/"><span class="card-category-list-name">web</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/window/"><span class="card-category-list-name">window</span><span class="card-category-list-count">3</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/apache/" style="font-size: 1.1em; color: #999">apache</a> <a href="/tags/archlinux/" style="font-size: 1.1em; color: #999">archlinux</a> <a href="/tags/bat/" style="font-size: 1.1em; color: #999">bat</a> <a href="/tags/jsp/" style="font-size: 1.1em; color: #999">jsp</a> <a href="/tags/kvm/" style="font-size: 1.1em; color: #999">kvm</a> <a href="/tags/linux/" style="font-size: 1.5em; color: #99a9bf">linux</a> <a href="/tags/log4j/" style="font-size: 1.1em; color: #999">log4j</a> <a href="/tags/nginx/" style="font-size: 1.1em; color: #999">nginx</a> <a href="/tags/servlet/" style="font-size: 1.1em; color: #999">servlet</a> <a href="/tags/shell/" style="font-size: 1.1em; color: #999">shell</a> <a href="/tags/tomcat/" style="font-size: 1.1em; color: #999">tomcat</a> <a href="/tags/vim/" style="font-size: 1.1em; color: #999">vim</a> <a href="/tags/window/" style="font-size: 1.3em; color: #99a1ac">window</a> <a href="/tags/wsl2/" style="font-size: 1.1em; color: #999">wsl2</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/03/"><span class="card-archive-list-date">三月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">十一月 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">13</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-04-07T13:23:40.746Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Caigxg</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/database/"><span class="card-category-list-name">database</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/"><span class="card-category-list-name">linux</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/log/"><span class="card-category-list-name">log</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/other/"><span class="card-category-list-name">other</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/python/"><span class="card-category-list-name">python</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/web/"><span class="card-category-list-name">web</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/window/"><span class="card-category-list-name">window</span><span class="card-category-list-count">3</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/apache/" style="font-size: 1.1em; color: #999">apache</a> <a href="/tags/archlinux/" style="font-size: 1.1em; color: #999">archlinux</a> <a href="/tags/bat/" style="font-size: 1.1em; color: #999">bat</a> <a href="/tags/db2/" style="font-size: 1.23em; color: #999ea6">db2</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/jsp/" style="font-size: 1.1em; color: #999">jsp</a> <a href="/tags/kvm/" style="font-size: 1.1em; color: #999">kvm</a> <a href="/tags/linux/" style="font-size: 1.5em; color: #99a9bf">linux</a> <a href="/tags/log4j/" style="font-size: 1.1em; color: #999">log4j</a> <a href="/tags/mysql/" style="font-size: 1.1em; color: #999">mysql</a> <a href="/tags/nginx/" style="font-size: 1.1em; color: #999">nginx</a> <a href="/tags/python/" style="font-size: 1.1em; color: #999">python</a> <a href="/tags/redis/" style="font-size: 1.1em; color: #999">redis</a> <a href="/tags/servlet/" style="font-size: 1.1em; color: #999">servlet</a> <a href="/tags/shell/" style="font-size: 1.1em; color: #999">shell</a> <a href="/tags/sql/" style="font-size: 1.1em; color: #999">sql</a> <a href="/tags/tomcat/" style="font-size: 1.1em; color: #999">tomcat</a> <a href="/tags/vim/" style="font-size: 1.1em; color: #999">vim</a> <a href="/tags/window/" style="font-size: 1.37em; color: #99a4b2">window</a> <a href="/tags/wsl2/" style="font-size: 1.1em; color: #999">wsl2</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">41</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/03/"><span class="card-archive-list-date">三月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">十一月 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">48</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-11-24T11:53:33.042Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Caigxg</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
